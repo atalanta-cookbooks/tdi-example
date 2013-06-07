@@ -1,0 +1,15 @@
+On <%= node['party']['day'] %> there is going to be a party!
+
+The following people are invited:
+
+<% node['party']['attendees'].each do |person| -%>
+- <%= person %>
+<% end -%>
+
+The entertainment will be as follows:
+
+Drinks: <%= node['party']['entertainment']['Drink'] %> 
+Food: <%= node['party']['entertainment']['Food'] %> 
+Music: <%= node['party']['entertainment']['Music'] %> 
+
+
